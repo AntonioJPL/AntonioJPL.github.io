@@ -1,0 +1,1438 @@
+@font-face {
+  font-family: "Orbitron";
+  src: url(../RESOURCES/FONTS/Orbitron-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Bungee";
+  src: url(../RESOURCES/FONTS/Roboto-Black.ttf);
+}
+
+@font-face {
+  font-family: "Zen";
+  src: url(../RESOURCES/FONTS/ZenDots-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Up";
+  src: url(../RESOURCES/FONTS/PressStart2P-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Rock";
+  src: url(../RESOURCES/FONTS/NewRocker-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Nosi";
+  src: url(../RESOURCES/FONTS/Nosifer-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Dino";
+  src: url(../RESOURCES/FONTS/RubikMarkerHatch-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Oso";
+  src: url(../RESOURCES/FONTS/MetalMania-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Staatliches";
+  src: url(../RESOURCES/FONTS/Staatliches-Regular.ttf);
+}
+
+body:not(body.sala1, body.sala2, body.sala3) {
+  margin: 0;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+body a {
+  text-decoration: none;
+  color: black;
+}
+
+body:not(body.sala1, body.sala2, body.sala3)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../RESOURCES/IMG/CineBG.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  filter: blur(5px);
+}
+
+#web {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20vw;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+#head {
+  background-image: radial-gradient(rgba(255, 255, 255, 50%) 33%,
+      rgba(0, 0, 0, 0) 66%,
+      rgba(0, 0, 0, 0));
+  background-position: top;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#head h1 {
+  margin-top: 75px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 42px;
+  align-items: center;
+  font-family: "Orbitron";
+}
+
+#head .titulo {
+  transition: transform .5s;
+}
+
+#head .titulo:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform .3s;
+  transform: scale(1.2);
+  background-image: radial-gradient(rgba(255, 255, 255, 75%) 33%,
+      rgba(0, 0, 0, 0) 66%,
+      rgba(255, 255, 255, 0) 100%);
+}
+
+#head nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-image: linear-gradient(90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 38, 93, 75%) 33% 66%,
+      rgba(0, 0, 0, 0) 100%);
+}
+
+#head nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-grow: 1;
+  height: 50px;
+  font-size: 20px;
+  transition-duration: 0.3s;
+  font-family: "Zen";
+}
+
+#head nav a:hover {
+  transition-duration: 0.3s;
+  background-color: black;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#head img {
+  width: 100px;
+}
+
+h2 {
+  text-align: center;
+  background-image: linear-gradient(90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(255, 255, 255, 0.75) 50%,
+      rgba(0, 0, 0, 0) 100%);
+  padding: 5px 0px;
+  font-size: 42px;
+  width: 100%;
+  font-family: "Bungee";
+  font-weight: lighter;
+  padding: 1% 0;
+  color: rgba(0, 36, 89, 255);
+  letter-spacing: 1.5px;
+}
+
+h2:hover {
+  cursor: default;
+}
+
+#cartelera {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 80%;
+  justify-content: center;
+}
+
+#cartelera div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#cartelera img {
+  width: 250px;
+  height: 400px;
+}
+
+#cartelera .horas,
+.horas {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 5px;
+  background-image: linear-gradient(90deg,
+      rgba(0, 0, 0, 0.25) 0%,
+      rgba(0, 36, 89, 0.75) 50%,
+      rgba(0, 0, 0, 0.25) 100%);
+}
+
+#cartelera .horas a {
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  font-weight: bold;
+  width: 25%;
+  text-align: center;
+  padding: 2.5px;
+}
+
+#cartelera .horas a:hover {
+  background-color: rgba(255, 255, 255, 75%);
+  color: rgb(0, 36, 89);
+  font-weight: bolder;
+}
+
+.mario,
+.dragones,
+.exorcista,
+.jhon,
+.sesenta,
+.oso {
+  position: relative;
+  width: 250px;
+  transition: all 0.3s ease;
+}
+
+.mario img:first-child,
+.dragones img:first-child,
+.exorcista img:first-child,
+.jhon img:first-child,
+.sesenta img:first-child,
+.oso img:first-child {
+  box-shadow: 0 60px 60px -60px rgba(0, 30, 355, 0.5);
+  border-radius: 4px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.mario img.png,
+.dragones img.png,
+.exorcista img.png,
+.jhon img.png,
+.sesenta img.png,
+.oso img.png {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(10%);
+  transition: 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  cursor: default;
+}
+
+.mario:hover,
+.dragones:hover,
+.exorcista:hover,
+.jhon:hover,
+.sesenta:hover,
+.oso:hover {
+  transform: perspective(250px) rotateX(2deg) translateY(-5%) translateZ(0);
+}
+
+.mario::before,
+.dragones::before,
+.exorcista::before,
+.jhon::before,
+.sesenta::before,
+.oso::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to bottom,
+      transparent 10%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0) 95%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.mario:hover::before,
+.dragones:hover::before,
+.exorcista:hover::before,
+.jhon:hover::before,
+.sesenta:hover::before,
+.oso:hover::before {
+  opacity: 1;
+}
+
+.mario:hover img.png {
+  opacity: 1;
+  transform: translateY(0%);
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.dragones:hover img.png {
+  opacity: 1;
+  transform: translateY(-1%);
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.exorcista:hover img.png {
+  opacity: 1;
+  transform: translateY(1%);
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.sesenta:hover img.png {
+  opacity: 1;
+  transform: translateY(0%);
+  pointer-events: all;
+  cursor: pointer;
+  filter: brightness(75%);
+}
+
+.jhon:hover img.png {
+  opacity: 1;
+  transform: translateY(0%);
+  pointer-events: all;
+  cursor: pointer;
+  filter: brightness(75%);
+}
+
+.oso:hover img.png {
+  opacity: 1;
+  transform: translateY(1%);
+  pointer-events: all;
+  cursor: pointer;
+  filter: brightness(75%);
+}
+
+.promociones {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+}
+
+.menus {
+  display: flex;
+  height: 400px;
+}
+
+h2.super,
+h2.dungeon,
+h2.dino,
+h2.papa,
+h2.wick,
+h2.coca {
+  width: 100%;
+  font-size: 32px;
+  color: rgb(0, 38, 93);
+  margin-top: 50px;
+  padding: 5px 0;
+}
+
+h2.super {
+  font-family: "Up";
+  font-size: 21px;
+  padding: 10px 0;
+}
+
+h2.dungeon {
+  font-family: "Rock";
+}
+
+h2.papa {
+  font-family: "Nosi";
+  font-size: 30px;
+  padding: 0;
+}
+
+h2.dino {
+  font-family: "Dino";
+  font-size: 34px;
+  padding: 0;
+}
+
+h2.coca {
+  font-family: "Oso";
+}
+
+h2.wick {
+  font-family: "Staatliches";
+}
+
+div.trailer {
+  padding: 5px 5px 1px 5px;
+  background-color: white;
+}
+
+div.trailer video {
+  object-fit: contain;
+  max-height: 500px;
+}
+
+div.horarios {
+  margin-top: 75px;
+  flex-direction: row;
+  color: white;
+  width: 100%;
+}
+
+.horarios .imagen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  float: left;
+  margin-right: 20px;
+  color: white;
+  font-size: 24px;
+}
+
+.horarios .imagen div {
+  background-color: white;
+  padding: 5px 5px 1px 5px;
+}
+
+.horarios .imagen div img {
+  width: 250px;
+}
+
+.tituloHorarios {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 24px;
+  font-family: 'Bungee';
+  color: rgba(0, 38, 93, 100%);
+  width: 100%;
+  height: 150px;
+  background-image: linear-gradient(225deg,
+      rgba(0, 0, 0, 255) 0%,
+      rgba(0, 36, 89, 255) 33%,
+      rgba(252, 252, 252, 255) 80%);
+  ;
+  margin-top: 5%;
+  bottom: 0;
+}
+
+footer a {
+  font-weight: bold;
+  color: white;
+}
+
+footer p {
+  margin: 0;
+}
+
+.descripcionPelicula {
+  display: flex;
+  min-height: 450px;
+}
+
+.campos {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.campoDescripcion .campos div {
+  font-size: 18px;
+}
+
+.campos .Sinopsis {
+  display: flex;
+  flex-grow: 1;
+}
+
+.campos .Duracion,
+.campos .Genero,
+.campos .Estreno,
+.campos .Calificacion {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.campos .Sinopsis p:first-of-type {
+  margin-right: 60px;
+}
+
+.campos .Duracion p:first-of-type {
+  margin-right: 55px;
+}
+
+.campos .Genero p:first-of-type {
+  margin-right: 70px;
+}
+
+.campos .Estreno p:first-of-type {
+  margin-right: 10px;
+}
+
+.campos .Calificacion p:first-of-type {
+  margin-right: 45px;
+}
+
+.campos .Sinopsis p {
+  text-align: justify;
+}
+
+.SeccionHoras {
+  margin-top: 5%;
+  font-size: 20px;
+}
+
+.SeccionHoras .tituloHorarios p {
+  font-size: 22px;
+}
+
+.SeccionHoras .horas a {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  padding: 15px 0;
+}
+
+.SeccionHoras .horas a:hover {
+  color: white;
+  background-color: rgba(0, 38, 93, 75%);
+  font-weight: bolder;
+}
+
+.carousel,
+.carouselSlider {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.promociones .carouselSlider {
+  width: 20%;
+  overflow: hidden;
+}
+
+.menus .carouselSlider {
+  width: 30%;
+  overflow: hidden;
+}
+
+.grupo1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.promociones .grupo1 {
+  animation: stepper 20s linear infinite;
+}
+
+.menus .grupo1 {
+  animation: carousel 25s linear infinite;
+}
+
+.grupo1 img {
+  margin: 0;
+  padding: 0;
+  height: 400px;
+  width: 500px;
+}
+
+.menus .carouselSlider .grupo1:hover {
+  animation-play-state: paused;
+}
+
+.menus .carouselSlider .grupo1 img:hover {
+  transform: scale(1.2);
+  cursor: default;
+}
+
+.menus .carouselSlider:hover {
+  height: 480px;
+}
+
+@keyframes carousel {
+  from {
+    transform: translateX(32%);
+  }
+
+  to {
+    transform: translateX(-18%);
+  }
+}
+
+@keyframes stepper {
+  0% {
+    transform: translateX(40%);
+  }
+
+  10% {
+    transform: translateX(40%);
+  }
+
+  20% {
+    transform: translateX(30%);
+  }
+
+  30% {
+    transform: translateX(30%);
+  }
+
+  40% {
+    transform: translateX(20%);
+  }
+
+  50% {
+    transform: translateX(20%);
+  }
+
+  60% {
+    transform: translateX(10%);
+  }
+
+  70% {
+    transform: translateX(10%);
+  }
+
+  80% {
+    transform: translateX(0%);
+  }
+
+  90% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-10%);
+  }
+}
+
+body.sala1,
+body.sala2,
+body.sala3 {
+  zoom: 67.5%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sala1 .contenedor,
+.sala2 .contenedor,
+.sala3 .contenedor {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.sala1 .fondo {
+  width: 1200px;
+  height: 900px;
+  background-image: url(../RESOURCES/IMG/Sala1.jpg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-size: cover;
+}
+
+.sala2 .fondo {
+  width: 1200px;
+  height: 900px;
+  background-image: url(../RESOURCES/IMG/Sala2.jpg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-size: cover;
+}
+
+.sala3 .fondo {
+  width: 1200px;
+  height: 900px;
+  background-image: url(../RESOURCES/IMG/Sala3.jpg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-size: cover;
+}
+
+.sala1 .header h2,
+.sala2 .header h2,
+.sala3 .header h2 {
+  display: flex;
+  margin: 0;
+  color: white;
+  font-size: 72px;
+  align-items: center;
+  font-family: "Orbitron";
+  text-shadow: 2px 2px 50px rgba(255, 255, 255, 0.75);
+  padding: 1% 0;
+}
+
+.sala1 table,
+.sala2 table,
+.sala3 table {
+  position: relative;
+  width: 100.3%;
+  top: 10.5%;
+  left: -0.3%;
+  margin: 0;
+  padding: 0;
+}
+
+.sala1 table tr,
+.sala2 table tr,
+.sala3 table tr,
+.sala3 table.pares tr {
+  padding: 0;
+  display: flex;
+  width: 120%;
+}
+
+.sala1 .display td,
+.sala2 .display td,
+.sala3 .display td {
+  position: relative;
+  margin: 0;
+  width: fit-content;
+  height: fit-content;
+  border-collapse: collapse;
+  height: 75px;
+  width: 58px;
+  cursor: pointer;
+}
+
+.sala1 .texto,
+.sala2 .texto,
+.sala3 .texto {
+  position: absolute;
+  top: 32%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 32px;
+  user-select: none;
+}
+
+.sala1 .display td img,
+.sala2 .display td img,
+.sala3 .display td img {
+  height: 75px;
+  width: 61px;
+  /*     display: none; */
+  z-index: 1;
+}
+
+.sala1 td.espacioEntreButacas {
+  width: 103px;
+}
+
+.sala1 .fila1,
+.sala1 .fila3,
+.sala1 .fila4 {
+  margin-bottom: 2.1%;
+}
+
+.sala1 .fila2 {
+  margin-bottom: 2.4%;
+}
+
+.sala1 .fila5 {
+  margin-bottom: 2.5%;
+}
+
+.sala1 .fila6 {
+  margin-bottom: 2.8%;
+}
+
+.sala1 .fila7 {
+  margin-bottom: 1.7%;
+}
+
+.sala1 .fila8 .espacioEntreButacas {
+  width: 644px;
+}
+
+.sala1 .header,
+.sala2 .header,
+.sala3 .header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 18.5% 0 19%;
+}
+
+.leyenda {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 19%;
+}
+
+.leyenda section {
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.leyenda section img {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-right: 10%;
+}
+
+.sala2 .display td {
+  position: relative;
+  margin: 0;
+  width: fit-content;
+  height: fit-content;
+  border-collapse: collapse;
+  height: 75px;
+  width: 59px;
+  cursor: pointer;
+}
+
+.sala2 td.espacioEntreButacas {
+  width: 103px;
+}
+
+.sala2 .fila1,
+.sala2 .fila3,
+.sala2 .fila4 {
+  margin-bottom: 2.1%;
+}
+
+.sala2 .fila2 {
+  margin-bottom: 2.4%;
+}
+
+.sala2 .fila5 {
+  margin-bottom: 2.5%;
+}
+
+.sala2 .fila6 {
+  margin-bottom: 2.8%;
+}
+
+.sala2 .fila7 {
+  margin-bottom: 1.75%;
+}
+
+.sala2 .fila8 .espacioEntreButacas {
+  width: 644px;
+}
+
+.sala3 .display td {
+  position: relative;
+  margin: 0;
+  width: fit-content;
+  height: fit-content;
+  border-collapse: collapse;
+  height: 75px;
+  width: 58.8px;
+  cursor: pointer;
+}
+
+.sala3 td.espacioEntreButacas {
+  width: 83px;
+}
+
+.sala3 .fila1,
+.sala3 .fila3 {
+  margin-bottom: 3.9%;
+}
+
+.sala3 .fila4 {
+  margin-bottom: 4%;
+}
+
+.sala3 .fila2 {
+  margin-bottom: 4.7%;
+}
+
+.sala3 .fila5 {
+  margin-bottom: 4.6%;
+}
+
+.sala3 .fila6 {
+  margin-bottom: 5.6%;
+}
+
+.sala3 .fila7 {
+  margin-bottom: 3.5%;
+}
+
+.sala3 .fila2par {
+  margin-top: 17.5%;
+  margin-bottom: 4.5%;
+}
+
+.sala3 .fila3par {
+  margin-bottom: 5.5%;
+}
+
+.sala3 .fila4par {
+  margin-bottom: 4.5%;
+}
+
+.sala3 .fila2 .par {
+  margin-bottom: 2.4%;
+}
+
+.sala3 .fila5par {
+  margin-bottom: 4.5%;
+}
+
+.sala3 .fila6par {
+  margin-bottom: 5.2%;
+}
+
+.sala3 .fila7par {
+  margin-bottom: 6%;
+}
+
+.tablas {
+  display: flex;
+  flex-direction: row;
+}
+
+.tablas table.display {
+  margin-top: 7.8%;
+  height: 100%;
+}
+
+.tablas table.display:not(.pares) {
+  margin-left: 0.1%;
+}
+
+#popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0s linear 0.2s;
+}
+
+#popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5%;
+  height: 75%;
+  width: 75%;
+  overflow: hidden;
+}
+
+#popup-content iframe {
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+#popup-container.visible {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+#popup-container.visible #popup-content {
+  transform: translate(-50%, -50%);
+  transition: transform 0.5s ease-out;
+}
+
+#popup-content button {
+  position: absolute;
+  top: -2.5%;
+  right: 0%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+
+#popup-content button img {
+  width: 100px;
+  height: 100px;
+}
+
+/* @keyframes wipe-in-up {
+    from {
+      clip-path: inset(100% 0 0 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  
+  [transition-style="in:wipe:up"] {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-up both;
+  }
+  @keyframes wipe-out-down {
+    from {
+      clip-path: inset(0 0 0 0);
+    }
+    to {
+      clip-path: inset(100% 0 0 0);
+    }
+  }
+  
+  [transition-style="out:wipe:down"] {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-out-down both;
+  } */
+.espacioContacto {
+  display: flex;
+  width: 120%;
+  min-height: 600px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 30px rgba(255, 255, 255, 0.25);
+  background-image: linear-gradient(225deg,
+      rgba(0, 0, 0, 255) 0%,
+      rgba(0, 36, 89, 255) 33%,
+      rgba(252, 252, 252, 255) 80%);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  bottom: 0;
+}
+
+.formularioContacto {
+  background-image: url(../RESOURCES/IMG/Logo.png);
+  background-size: 250px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 1%;
+  width: 50%;
+  min-height: 600px;
+  display: grid;
+}
+
+.campoFormulario {
+  font-family: 'Bungee';
+  letter-spacing: 1px;
+  display: flex;
+  height: 27.5px;
+}
+
+.enviar {
+  width: 100%;
+  background-color: rgba(0, 36, 89, 255);
+  font-family: 'Bungee';
+  letter-spacing: 1px;
+  color: white;
+  border: 1px solid rgb(59, 59, 59);
+  padding: 5% 0;
+  font-size: 32px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 1px solid rgb(59, 59, 59);
+  outline: none;
+  transition: transform .5s;
+}
+
+form label {
+  font-family: 'Bungee';
+  color: rgb(59, 59, 59);
+  position: absolute;
+  left: 1%;
+  font-size: 20px;
+}
+
+form textarea {
+  resize: none;
+}
+
+form input:focus,
+form input:not(:placeholder-shown) {
+  transition: transform .5s;
+  transform: translateY(100%);
+  border-bottom: 2px solid rgba(0, 36, 89, 255);
+}
+
+form textarea:focus,
+form textarea:not(:placeholder-shown) {
+  transition: transform .5s;
+  transform: translateY(20%);
+  max-width: 100%;
+  height: 175px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  overflow: hidden;
+  vertical-align: top;
+  border-bottom: 2px solid rgba(0, 36, 89, 255);
+}
+
+form input:focus~label,
+form input:not(:placeholder-shown)~label,
+form textarea:focus~label,
+form textarea:not(:placeholder-shown)~label {
+  color: rgba(0, 36, 89, 255);
+  font-weight: bold;
+}
+
+.campoFormulario:not(.campoFormulario:last-of-type) {
+  margin-bottom: 15%;
+}
+
+.campoFormulario:last-of-type {
+  margin-bottom: 42.5%;
+}
+
+#mapa {
+  width: 100%;
+  height: 50vh;
+  background-color: rgba(128, 128, 128, 0.10);
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 5px 5px 30px rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+}
+
+/* .footerContacto {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 24px;
+  color: rgba(0, 38, 93, 100%);
+  justify-content: center;
+  background-color: white;
+  background-image: none;
+}
+
+.footerContacto a {
+  color: rgb(0, 36, 89);
+} */
+
+.infoContacto {
+  font-family: 'Bungee';
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 40vh;
+  margin-left: 1%;
+}
+
+.infoDerecha {
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+  width: 50%;
+  height: 100%;
+  color: white;
+  font-size: 20px;
+}
+
+.textoNegrita {
+  color: rgba(0, 38, 93, 100%);
+  font-weight: bold;
+  -webkit-text-stroke: .1px black;
+}
+
+@media screen and (max-width: 530px) {
+  #web {
+    margin: 0;
+  }
+
+  #head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #head h1 {
+    margin: 5%;
+    margin-top: 20%;
+    font-size: 24px;
+  }
+
+  #head img {
+    width: 60px;
+  }
+
+  #head nav a {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  #head nav {
+    width: 95%;
+  }
+
+  #head nav a:hover {
+    font-size: 14px;
+  }
+
+
+  h2 {
+    width: 95%;
+    font-size: 24px;
+  }
+
+  #cartelera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #cartelera img {
+    width: 200px;
+    height: 300px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+
+  footer p {
+    margin: 0 5%;
+  }
+
+  footer a {
+    color: black;
+  }
+}
+
+@media screen and (min-width: 531px) and (max-width: 790px) {
+  #web {
+    margin: 0;
+  }
+
+  #head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #head h1 {
+    margin: 5%;
+    margin-top: 15%;
+    font-size: 32px;
+  }
+
+  #head img {
+    width: 75px;
+  }
+
+  #head nav a {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  #head nav {
+    width: 90%;
+  }
+
+  #head nav a:hover {
+    font-size: 18px;
+  }
+
+
+  h2 {
+    width: 90%;
+    font-size: 32px;
+  }
+
+  #cartelera {
+    width: 95%;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+
+  footer p {
+    margin: 0 5%;
+  }
+
+  footer a {
+    color: black;
+  }
+}
+
+@media screen and (min-width: 791px) and (max-width: 925px) {
+  #web {
+    margin: 0;
+  }
+
+  #head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #head h1 {
+    margin: 5%;
+    margin-top: 12.5%;
+    font-size: 36px;
+  }
+
+  #head img {
+    width: 90px;
+  }
+
+  #head nav a {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  #head nav {
+    width: 85%;
+  }
+
+  #head nav a:hover {
+    font-size: 20px;
+  }
+
+
+  h2 {
+    width: 85%;
+    font-size: 36px;
+  }
+
+  #cartelera {
+    width: 80%;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+
+  footer p {
+    margin: 0 5%;
+  }
+
+  footer a {
+    color: black;
+  }
+}
+
+@media screen and (min-width: 926px) and (max-width: 1250px) {
+
+  #web {
+    margin: 0;
+  }
+
+  #head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #head h1 {
+    margin: 5%;
+    margin-top: 12.5%;
+    font-size: 40px;
+  }
+
+  #head img {
+    width: 90px;
+  }
+
+  #head nav a {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  #head nav {
+    width: 80%;
+  }
+
+  #head nav a:hover {
+    font-size: 22px;
+  }
+
+
+  h2 {
+    width: 80%;
+    font-size: 36px;
+  }
+
+  #cartelera {
+    width: 80%;
+  }
+
+  footer {
+    font-size: 16px;
+  }
+
+  footer p {
+    margin: 0 5%;
+  }
+
+  footer a {
+    color: black;
+  }
+
+}
+
+@media screen and (min-width: 1251px) and (max-width: 1562px) {
+
+  #cartelera {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 20px;
+  }
+
+}

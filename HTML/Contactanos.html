@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>&#127909 Multicines La Palma &#127915</title>
+</head>
+
+<body>
+    <div id="web">
+
+        <div id="head">
+            <a class="titulo" href="./Cartelera.html">
+                <h1><img src="../RESOURCES/IMG/La Palma.png" alt="La Palma">Multicines La Palma<img
+                        src="../RESOURCES/IMG/La Palma.png" alt="La Palma"></h1>
+            </a>
+            <nav>
+                <a href="./Cartelera.html">Cartelera</a>
+                <a href="./Menus.html">Promociones y menús</a>
+                <a href="./Contactanos.html">Contáctanos</a>
+            </nav>
+        </div>
+
+        <h2>Contáctanos</h2>
+        <div class="espacioContacto">
+            <form class="formularioContacto">
+                <div class="campoFormulario">
+                    <input id="nombre" type="text" placeholder=" " required title="Introduzca su nombre."
+                        oninvalid="this.setCustomValidity('Debes rellenar este campo para poder ponerte en contacto con nosotros.')">
+                    <label for="nombre">Nombre:</label>
+                </div>
+                <div class="campoFormulario">
+                    <input id="email" type="email" placeholder=" " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        required title="Introduzca la dirección de correo a la que queire que le respondamos."
+                        oninvalid="this.setCustomValidity('Debes rellenar este campo para poder ponerte en contacto con nosotros.')">
+                    <label for="email">Correo:</label>
+                </div>
+                <div class="campoFormulario">
+                    <input id="telefono" type="text" placeholder=" " pattern="[0-9]{9}"
+                        title="Introduzca un teléfono válido de 9 dígitos.">
+                    <label for="telefono">Teléfono:</label>
+                </div>
+                <div class="campoFormulario">
+                    <textarea id="mensaje" type="text" placeholder=" " required title="Introduzca su mensaje."
+                        oninvalid="this.setCustomValidity('Debes rellenar este campo para poder ponerte en contacto con nosotros.')"></textarea>
+                    <label for="mensaje">Mensaje:</label>
+                </div>
+                <button class="enviar">Enviar</button>
+            </form>
+            <div class="infoDerecha">
+                <div id="mapa">
+                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1040.876947854993!2d-17.911024501829807!3d28.657359827962924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1683130927323!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                </div>
+                <div class="infoContacto">
+                    <p><span class="textoNegrita">Nombre de la Empresa:</span> Multicines La Palma S.L.</p>
+                    <p><span class="textoNegrita">Teléfono de contacto:</span> 922 46 44 04</p>
+                    <p><span class="textoNegrita">Dirección:</span> Calle las Adelfas 13, 38760 Los Llanos de Aridane,
+                        Santa Cruz de Tenerife</p>
+                    <p><span class="textoNegrita">Email:</span> multicineslapalma@multicinesLP.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footerContacto">
+        <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="¡CSS Válido!" />
+            </a>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                    alt="Licencia de Creative Commons" style="border-width:0"
+                    src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+        </p>
+        <p><br />Este obra está bajo una <a rel="license"
+                href="http://creativecommons.org/licenses/by-nc-nd/4.0/">licencia de Creative Commons
+                Reconocimiento-NoComercial-SinObraDerivada 4.0 Internacional</a>.</p>
+    </footer>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtbzsqMXJObaR35g_Bs8YdVhPhPxQTSUk&callback=initMap"></script>
+    <script src="../JS/maps.js"></script>
+</body>
+
+</html>
