@@ -1287,6 +1287,7 @@ form textarea:not(:placeholder-shown)~label {
 
   footer {
     font-size: 12px;
+    z-index: 1;
   }
 
   footer p {
