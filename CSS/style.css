@@ -409,9 +409,15 @@ h2.wick {
   font-family: "Staatliches";
 }
 
+.trailer iframe{
+  pointer-events: none;
+}
+
 div.trailer {
-  padding: 5px 5px 1px 5px;
+  padding: 5px 5px 5px 5px;
   background-color: white;
+  width: 72.5%;
+  height: 50vh;
 }
 
 div.trailer video {
