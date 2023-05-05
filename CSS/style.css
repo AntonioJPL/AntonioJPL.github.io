@@ -473,6 +473,9 @@ footer {
   ;
   margin-top: 5%;
   bottom: 0;
+  z-index: 1;
+  position: relative;
+  bottom: 0;
 }
 
 footer a {
@@ -559,6 +562,11 @@ footer p {
   color: white;
   background-color: rgba(0, 38, 93, 75%);
   font-weight: bolder;
+}
+
+.contenidoPromo{
+  display: flex;
+  flex-direction: column;
 }
 
 .carousel,
@@ -1220,7 +1228,6 @@ form textarea:not(:placeholder-shown)~label {
 }
 
 @media screen and (max-width: 530px) {
-
   #web {
     margin: 0;
   }
@@ -1263,7 +1270,6 @@ form textarea:not(:placeholder-shown)~label {
   #head nav a:hover {
     font-size: 14px;
   }
-
 
   h2 {
     width: 95%;
