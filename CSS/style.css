@@ -42,6 +42,9 @@
   font-family: "Staatliches";
   src: url(../RESOURCES/FONTS/Staatliches-Regular.ttf);
 }
+html {
+  height: 100vh;
+}
 
 body:not(body.sala1, body.sala2, body.sala3) {
   margin: 0;
@@ -60,16 +63,18 @@ body:not(body.sala1, body.sala2, body.sala3)::before {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
+  width: 100%;
   background-image: url(../RESOURCES/IMG/CineBG.gif);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: top center;
   background-attachment: scroll;
   filter: blur(5px);
 }
 
 #web {
+  height: 100%;
   display: flex;
   flex-direction: column;
   margin: 0 20vw;
@@ -83,6 +88,8 @@ body:not(body.sala1, body.sala2, body.sala3)::before {
       rgba(0, 0, 0, 0) 66%,
       rgba(0, 0, 0, 0));
   background-position: top;
+  background-size: 100% 90%;
+  background-repeat: no-repeat;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -91,8 +98,12 @@ body:not(body.sala1, body.sala2, body.sala3)::before {
   justify-content: space-between;
 }
 
+#head a{
+  height: 10%;
+}
+
 #head h1 {
-  margin-top: 75px;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -155,6 +166,7 @@ h2 {
       rgba(0, 0, 0, 0) 0%,
       rgba(255, 255, 255, 0.75) 50%,
       rgba(0, 0, 0, 0) 100%);
+      background-size: 100% 50%;
   padding: 5px 0px;
   font-size: 42px;
   width: 100%;
@@ -164,6 +176,7 @@ h2 {
   color: rgba(0, 36, 89, 255);
   letter-spacing: 1.5px;
 }
+
 
 h2:hover {
   cursor: default;
@@ -550,15 +563,27 @@ footer p {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 52vw;
+}
+
+.menus .carousel,
+.menus .carouselSlider {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 77vw;
 }
 
 .promociones .carouselSlider {
-  width: 20%;
+  width: 100%;
   overflow: hidden;
 }
 
 .menus .carouselSlider {
-  width: 30%;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -1189,6 +1214,7 @@ form textarea:not(:placeholder-shown)~label {
 }
 
 @media screen and (max-width: 530px) {
+
   #web {
     margin: 0;
   }
@@ -1197,6 +1223,12 @@ form textarea:not(:placeholder-shown)~label {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  #head a{
+    display: flex;
+    align-items: center;
+    height: 15vh;
   }
 
   #head h1 {
@@ -1212,6 +1244,10 @@ form textarea:not(:placeholder-shown)~label {
   #head nav a {
     text-align: center;
     font-size: 12px;
+  }
+
+  #head h1{
+    margin-top: 25px;
   }
 
   #head nav {
@@ -1249,6 +1285,33 @@ form textarea:not(:placeholder-shown)~label {
 
   footer a {
     color: black;
+  }
+
+  .carousel,
+  .carouselSlider,
+  .menus .carousel,
+  .menus .carouselSlider {
+    width: 90vw;
+  }
+
+  .promociones {
+    max-height: 225px;
+    height: auto;
+  }
+
+  .menus {
+    height: auto;
+  }
+
+  .grupo1 img {
+    margin: 0;
+    padding: 0;
+    height: 175px;
+    width: 187px;
+  }
+
+  .menus .carouselSlider:hover {
+    height: 210px;
   }
 }
 
@@ -1306,6 +1369,35 @@ form textarea:not(:placeholder-shown)~label {
 
   footer a {
     color: black;
+  }
+  .carousel,
+  .carouselSlider{
+    width: 70vw;
+  }
+
+  .menus .carousel,
+  .menus .carouselSlider {
+    width: 90vw;
+  }
+
+  .promociones {
+    max-height: 225px;
+    height: auto;
+  }
+
+  .menus {
+    height: auto;
+  }
+
+  .grupo1 img {
+    margin: 0;
+    padding: 0;
+    height: 175px;
+    width: 187px;
+  }
+
+  .menus .carouselSlider:hover {
+    height: 210px;
   }
 }
 
