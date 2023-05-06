@@ -42,6 +42,7 @@
   font-family: "Staatliches";
   src: url(../RESOURCES/FONTS/Staatliches-Regular.ttf);
 }
+
 html {
   height: 100vh;
 }
@@ -98,7 +99,7 @@ body:not(body.sala1, body.sala2, body.sala3)::before {
   justify-content: space-between;
 }
 
-#head a{
+#head a {
   height: 10%;
 }
 
@@ -166,7 +167,7 @@ h2 {
       rgba(0, 0, 0, 0) 0%,
       rgba(255, 255, 255, 0.75) 50%,
       rgba(0, 0, 0, 0) 100%);
-      background-size: 100% 50%;
+  background-size: 100% 50%;
   padding: 5px 0px;
   font-size: 42px;
   width: 100%;
@@ -409,7 +410,7 @@ h2.wick {
   font-family: "Staatliches";
 }
 
-.trailer iframe{
+.trailer iframe {
   pointer-events: none;
 }
 
@@ -562,7 +563,7 @@ footer p {
   font-weight: bolder;
 }
 
-.contenidoPromo{
+.contenidoPromo {
   display: flex;
   flex-direction: column;
 }
@@ -1236,7 +1237,7 @@ form textarea:not(:placeholder-shown)~label {
     align-items: center;
   }
 
-  #head a{
+  #head a {
     display: flex;
     align-items: center;
     height: 15vh;
@@ -1257,7 +1258,7 @@ form textarea:not(:placeholder-shown)~label {
     font-size: 12px;
   }
 
-  #head h1{
+  #head h1 {
     margin-top: 25px;
   }
 
@@ -1299,30 +1300,65 @@ form textarea:not(:placeholder-shown)~label {
   }
 
   .carousel,
-  .carouselSlider,
+  .carouselSlider {
+    width: 320px;
+  }
+
   .menus .carousel,
   .menus .carouselSlider {
-    width: 90vw;
+    width: 85vw;
   }
 
   .promociones {
-    max-height: 225px;
-    height: auto;
+    height: 177.5px;
   }
 
   .menus {
-    height: auto;
+    height: 177.5px;
   }
 
   .grupo1 img {
     margin: 0;
     padding: 0;
-    height: 175px;
-    width: 187px;
+    height: 176px;
+    width: 160px;
   }
 
   .menus .carouselSlider:hover {
-    height: 210px;
+    height: 211.2px;
+  }
+
+  .espacioContacto{
+    font-size: 14px;
+    max-width: 90vw;
+    width: auto;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  label{
+    font-size: 14px !important;
+    left: 2.5% !important;
+  }
+
+  .formularioContacto{
+    width: 95%;
+  }
+
+  .infoDerecha{
+    width: 95%;
+  }
+
+  #mapa, .infoContacto{
+    margin-bottom: 5%;
+  }
+
+  .infoContacto p{
+    font-size: 14px !important;
+  }
+
+  form textarea:focus, form textarea:not(:placeholder-shown){
+    height: 160px;
   }
 }
 
@@ -1381,9 +1417,10 @@ form textarea:not(:placeholder-shown)~label {
   footer a {
     color: black;
   }
+
   .carousel,
-  .carouselSlider{
-    width: 70vw;
+  .carouselSlider {
+    width: 447px;
   }
 
   .menus .carousel,
@@ -1392,23 +1429,55 @@ form textarea:not(:placeholder-shown)~label {
   }
 
   .promociones {
-    max-height: 225px;
-    height: auto;
+    height: 229px;
   }
 
   .menus {
-    height: auto;
+    height: 229px;
   }
 
   .grupo1 img {
     margin: 0;
     padding: 0;
-    height: 175px;
-    width: 187px;
+    height: 227.5px;
+    width: 223.5px;
   }
 
   .menus .carouselSlider:hover {
-    height: 210px;
+    height: 273px;
+  }
+
+  .espacioContacto{
+    font-size: 14px;
+    max-width: 90vw;
+    width: auto;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  label{
+    font-size: 14px !important;
+    left: 2.5% !important;
+  }
+
+  .formularioContacto{
+    width: 95%;
+  }
+
+  .infoDerecha{
+    width: 95%;
+  }
+
+  #mapa, .infoContacto{
+    margin-bottom: 5%;
+  }
+
+  .infoContacto p{
+    font-size: 14px !important;
+  }
+
+  form textarea:focus, form textarea:not(:placeholder-shown){
+    height: 160px;
   }
 }
 
@@ -1466,6 +1535,67 @@ form textarea:not(:placeholder-shown)~label {
 
   footer a {
     color: black;
+  }
+
+  .carousel,
+  .carouselSlider {
+    width: 574px;
+  }
+
+  .menus .carousel,
+  .menus .carouselSlider {
+    width: 95vw;
+  }
+
+  .promociones {
+    height: 300px;
+  }
+
+  .menus {
+    height: 287.5px;
+  }
+
+  .grupo1 img {
+    margin: 0;
+    padding: 0;
+    height: 285px;
+    width: 287px;
+  }
+
+  .menus .carouselSlider:hover {
+    height: 342px;
+  }
+  .espacioContacto{
+    font-size: 14px;
+    max-width: 90vw;
+    width: auto;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  label{
+    font-size: 14px !important;
+    left: 2.5% !important;
+  }
+
+  .formularioContacto{
+    width: 95%;
+  }
+
+  .infoDerecha{
+    width: 95%;
+  }
+
+  #mapa, .infoContacto{
+    margin-bottom: 5%;
+  }
+
+  .infoContacto p{
+    font-size: 14px !important;
+  }
+
+  form textarea:focus, form textarea:not(:placeholder-shown){
+    height: 160px;
   }
 }
 
@@ -1526,6 +1656,62 @@ form textarea:not(:placeholder-shown)~label {
     color: black;
   }
 
+  .carousel,
+  .carouselSlider {
+    width: 574px;
+  }
+
+  .menus .carousel,
+  .menus .carouselSlider {
+    width: 90vw;
+  }
+
+  .promociones {
+    height: 300px;
+  }
+
+  .menus {
+    height: 287.5px;
+  }
+
+  .grupo1 img {
+    margin: 0;
+    padding: 0;
+    height: 285px;
+    width: 287px;
+  }
+
+  .menus .carouselSlider:hover {
+    height: 342px;
+  }
+
+  .espacioContacto{
+    max-width: 90vw;
+    width: auto;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  label{
+    left: 2.5% !important;
+  }
+
+  .formularioContacto{
+    width: 95%;
+  }
+
+  .infoDerecha{
+    width: 95%;
+  }
+
+  #mapa, .infoContacto{
+    margin-bottom: 5%;
+  }
+
+
+  form textarea:focus, form textarea:not(:placeholder-shown){
+    height: 160px;
+  }
 }
 
 @media screen and (min-width: 1251px) and (max-width: 1562px) {
@@ -1536,6 +1722,32 @@ form textarea:not(:placeholder-shown)~label {
 
   footer {
     font-size: 20px;
+  }
+
+  .carousel,
+  .carouselSlider {
+    width: 650px;
+  }
+
+  .menus .carousel,
+  .menus .carouselSlider {
+    width: 85vw;
+  }
+
+  .promociones,
+  .menus {
+    height: 351.5px;
+  }
+
+  .grupo1 img {
+    margin: 0;
+    padding: 0;
+    height: 350px;
+    width: 325px;
+  }
+
+  .menus .carouselSlider:hover {
+    height: 420px;
   }
 
 }
