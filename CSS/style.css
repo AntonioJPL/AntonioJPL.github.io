@@ -44,6 +44,9 @@
 }
 
 html {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100vh;
 }
 
@@ -382,7 +385,7 @@ h2.coca {
 
 h2.super {
   font-family: "Up";
-  font-size: 21px;
+  font-size: 28px;
   padding: 10px 0;
 }
 
@@ -417,18 +420,17 @@ h2.wick {
 div.trailer {
   padding: 5px 5px 5px 5px;
   background-color: white;
-  width: 72.5%;
-  height: 50vh;
+  width: 90%;
+  height: 45vh;
 }
 
 div.trailer video {
   object-fit: contain;
-  max-height: 500px;
+  /* max-height: 500px; */
 }
 
 div.horarios {
   margin-top: 75px;
-  flex-direction: row;
   color: white;
   width: 100%;
 }
@@ -540,8 +542,19 @@ footer p {
 }
 
 .SeccionHoras {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 5%;
   font-size: 20px;
+}
+
+.SeccionHoras .titulo {
+  width: 100%;
+}
+
+.SeccionHoras .horas {
+  width: 100%;
 }
 
 .SeccionHoras .tituloHorarios p {
@@ -689,24 +702,47 @@ footer p {
   }
 }
 
+html.salas {
+  display: grid;
+  place-content: center;
+ /*  position: absolute;
+  right: 25%; */
+  zoom: 65%;
+  height: 100%;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0;
+}
+
 body.sala1,
 body.sala2,
 body.sala3 {
-  zoom: 67.5%;
+  /* zoom: 65%; */
+  overflow: hidden;
   width: 100%;
   height: 100%;
   background-color: black;
   margin: 0;
   padding: 0;
-  display: flex;
+  /* display: flex;
+  align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; */
+  /* display: grid;
+  place-items: center; */
+  z-index: 2;
 }
+
+/* body.sala1,
+body.sala2,
+body.sala3{
+  zoom: 65%;
+} */
 
 .sala1 .contenedor,
 .sala2 .contenedor,
 .sala3 .contenedor {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -717,7 +753,7 @@ body.sala3 {
   height: 900px;
   background-image: url(../RESOURCES/IMG/Sala1.jpg);
   background-repeat: no-repeat;
-  background-size: 50%;
+  /* background-size: 50%; */
   background-size: cover;
 }
 
@@ -749,18 +785,26 @@ body.sala3 {
   align-items: center;
   font-family: "Orbitron";
   text-shadow: 2px 2px 50px rgba(255, 255, 255, 0.75);
-  padding: 1% 0;
+  padding: 0;
 }
 
 .sala1 table,
 .sala2 table,
 .sala3 table {
   position: relative;
+  height: 100%;
   width: 100.3%;
   top: 10.5%;
   left: -0.3%;
   margin: 0;
   padding: 0;
+}
+
+.sala1 .display,
+.sala2 .display,
+.sala3 .display {
+  height: 100%;
+  width: 100%;
 }
 
 .sala1 table tr,
@@ -769,7 +813,7 @@ body.sala3 {
 .sala3 table.pares tr {
   padding: 0;
   display: flex;
-  width: 120%;
+  width: 100%;
 }
 
 .sala1 .display td,
@@ -804,7 +848,7 @@ body.sala3 {
   height: 75px;
   width: 61px;
   /*     display: none; */
-  z-index: 1;
+  z-index: 2;
 }
 
 .sala1 td.espacioEntreButacas {
@@ -842,7 +886,7 @@ body.sala3 {
 .sala3 .header {
   display: flex;
   justify-content: space-between;
-  margin: 0 18.5% 0 19%;
+  width: 100%;
 }
 
 .leyenda {
@@ -1002,6 +1046,7 @@ body.sala3 {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s, visibility 0s linear 0.2s;
+  z-index: 2;
 }
 
 #popup-content {
@@ -1009,16 +1054,21 @@ body.sala3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 5%;
+  /*   padding: 5%; */
   height: 75%;
-  width: 75%;
+  width: 50%;
   overflow: hidden;
 }
 
 #popup-content iframe {
+  display: flex;
+  align-items: right;
+  justify-content: center;
+  margin: 0 auto;
   height: 100%;
   width: 100%;
   border: none;
+  overflow: hidden;
 }
 
 #popup-container.visible {
@@ -1034,7 +1084,7 @@ body.sala3 {
 
 #popup-content button {
   position: absolute;
-  top: -2.5%;
+  top: 0%;
   right: 0%;
   background-color: rgba(0, 0, 0, 0);
   border: none;
@@ -1044,6 +1094,19 @@ body.sala3 {
 #popup-content button img {
   width: 100px;
   height: 100px;
+}
+
+
+#popup-content iframe html {
+  height: 100%;
+}
+
+#popup-content iframe body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
 
 /* @keyframes wipe-in-up {
@@ -1210,6 +1273,10 @@ form textarea:not(:placeholder-shown)~label {
   margin-left: 1%;
 }
 
+.infoContacto p {
+  word-wrap: break-word;
+}
+
 .infoDerecha {
   display: flex;
   flex-direction: column;
@@ -1328,7 +1395,7 @@ form textarea:not(:placeholder-shown)~label {
     height: 211.2px;
   }
 
-  .espacioContacto{
+  .espacioContacto {
     font-size: 14px;
     max-width: 90vw;
     width: auto;
@@ -1336,30 +1403,100 @@ form textarea:not(:placeholder-shown)~label {
     align-items: center;
   }
 
-  label{
+  label {
     font-size: 14px !important;
     left: 2.5% !important;
   }
 
-  .formularioContacto{
+  .formularioContacto {
     width: 95%;
   }
 
-  .infoDerecha{
+  .infoDerecha {
     width: 95%;
   }
 
-  #mapa, .infoContacto{
+  #mapa,
+  .infoContacto {
     margin-bottom: 5%;
   }
 
-  .infoContacto p{
+  #mapa {
+    margin-top: 2.5%;
+  }
+
+  .infoContacto p {
     font-size: 14px !important;
   }
 
-  form textarea:focus, form textarea:not(:placeholder-shown){
-    height: 160px;
+  form textarea:focus,
+  form textarea:not(:placeholder-shown) {
+    height: 140px;
   }
+
+  .trailer {
+    width: 300px !important;
+    height: 200px !important;
+  }
+
+  h2.super,
+  h2.dungeon,
+  h2.dino,
+  h2.papa,
+  h2.wick,
+  h2.coca {
+    width: 90%;
+    font-size: 24px;
+  }
+
+  .descripcionPelicula {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+  }
+
+  .campos {
+    word-wrap: break-word;
+  }
+
+  .campos p,
+  .SeccionHoras .tituloHorarios,
+  .SeccionHoras .horas a {
+    font-size: 14px !important;
+  }
+
+  .horarios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .SeccionHoras {
+    width: 90%;
+  }
+
+  #popup-content {
+    height: 50%;
+    width: 90%;
+  }
+
+  html.salas{
+    zoom:35%;
+  }
+
+  #popup-content button img {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* body.sala1,
+  body.sala2,
+  body.sala3 {
+    zoom: 25%;
+  } */
+
 }
 
 @media screen and (min-width: 531px) and (max-width: 790px) {
@@ -1447,7 +1584,7 @@ form textarea:not(:placeholder-shown)~label {
     height: 273px;
   }
 
-  .espacioContacto{
+  .espacioContacto {
     font-size: 14px;
     max-width: 90vw;
     width: auto;
@@ -1455,30 +1592,100 @@ form textarea:not(:placeholder-shown)~label {
     align-items: center;
   }
 
-  label{
+  label {
     font-size: 14px !important;
     left: 2.5% !important;
   }
 
-  .formularioContacto{
+  .formularioContacto {
     width: 95%;
   }
 
-  .infoDerecha{
+  .infoDerecha {
     width: 95%;
   }
 
-  #mapa, .infoContacto{
+  #mapa,
+  .infoContacto {
     margin-bottom: 5%;
   }
 
-  .infoContacto p{
+  #mapa {
+    margin-top: 2.5%;
+  }
+
+  .infoContacto p {
     font-size: 14px !important;
   }
 
-  form textarea:focus, form textarea:not(:placeholder-shown){
+  form textarea:focus,
+  form textarea:not(:placeholder-shown) {
     height: 160px;
   }
+
+  .trailer {
+    width: 550px !important;
+    height: 350px !important;
+  }
+
+  h2.super,
+  h2.dungeon,
+  h2.dino,
+  h2.papa,
+  h2.wick,
+  h2.coca {
+    width: 90%;
+    font-size: 24px;
+  }
+
+  .descripcionPelicula {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+  }
+
+  .campos {
+    word-wrap: break-word;
+  }
+
+  .campos p,
+  .SeccionHoras .tituloHorarios,
+  .SeccionHoras .horas a {
+    font-size: 16px !important;
+  }
+
+  .horarios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .SeccionHoras {
+    width: 90%;
+  }
+
+  #popup-content {
+    height: 50%;
+    width: 90%;
+  }
+
+  html.salas{
+    zoom: 50%;
+  }
+
+  #popup-content button img {
+    width: 65px;
+    height: 65px;
+  }
+
+ /*  body.sala1,
+  body.sala2,
+  body.sala3 {
+    zoom: 37.5%;
+  } */
+
 }
 
 @media screen and (min-width: 791px) and (max-width: 925px) {
@@ -1565,7 +1772,8 @@ form textarea:not(:placeholder-shown)~label {
   .menus .carouselSlider:hover {
     height: 342px;
   }
-  .espacioContacto{
+
+  .espacioContacto {
     font-size: 14px;
     max-width: 90vw;
     width: auto;
@@ -1573,30 +1781,98 @@ form textarea:not(:placeholder-shown)~label {
     align-items: center;
   }
 
-  label{
+  label {
     font-size: 14px !important;
     left: 2.5% !important;
   }
 
-  .formularioContacto{
+  .formularioContacto {
     width: 95%;
   }
 
-  .infoDerecha{
+  .infoDerecha {
     width: 95%;
   }
 
-  #mapa, .infoContacto{
+  #mapa,
+  .infoContacto {
     margin-bottom: 5%;
   }
 
-  .infoContacto p{
-    font-size: 14px !important;
+  #mapa {
+    margin-top: 2.5%;
   }
 
-  form textarea:focus, form textarea:not(:placeholder-shown){
+  .infoContacto p {
+    font-size: 18px !important;
+  }
+
+  form textarea:focus,
+  form textarea:not(:placeholder-shown) {
     height: 160px;
   }
+
+  .trailer {
+    width: 550px !important;
+    height: 350px !important;
+  }
+
+  h2.super,
+  h2.dungeon,
+  h2.dino,
+  h2.papa,
+  h2.wick,
+  h2.coca {
+    width: 90%;
+    font-size: 24px;
+  }
+
+  .descripcionPelicula {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+  }
+
+  .campos {
+    word-wrap: break-word;
+  }
+
+  .campos p,
+  .SeccionHoras .tituloHorarios,
+  .SeccionHoras .horas a {
+    font-size: 18px !important;
+  }
+
+  .horarios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .SeccionHoras {
+    width: 90%;
+  }
+  #popup-content {
+    height: 50%;
+    width: 90%;
+  }
+
+  html.salas{
+    zoom: 45%;
+  }
+
+  #popup-content button img {
+    width: 75px;
+    height: 75px;
+  }
+
+  /* body.sala1,
+  body.sala2,
+  body.sala3 {
+    zoom: 42.5%;
+  } */
 }
 
 @media screen and (min-width: 926px) and (max-width: 1250px) {
@@ -1685,33 +1961,99 @@ form textarea:not(:placeholder-shown)~label {
     height: 342px;
   }
 
-  .espacioContacto{
+  .espacioContacto {
     max-width: 90vw;
     width: auto;
     flex-direction: column-reverse;
     align-items: center;
   }
 
-  label{
+  label {
     left: 2.5% !important;
   }
 
-  .formularioContacto{
+  .formularioContacto {
     width: 95%;
   }
 
-  .infoDerecha{
+  .infoDerecha {
     width: 95%;
   }
 
-  #mapa, .infoContacto{
+  #mapa,
+  .infoContacto {
     margin-bottom: 5%;
   }
 
-
-  form textarea:focus, form textarea:not(:placeholder-shown){
+  form textarea:focus,
+  form textarea:not(:placeholder-shown) {
     height: 160px;
   }
+
+  .trailer {
+    width: 650px !important;
+    height: 400px !important;
+  }
+
+  h2.super,
+  h2.dungeon,
+  h2.dino,
+  h2.papa,
+  h2.wick,
+  h2.coca {
+    width: 90%;
+    font-size: 24px;
+  }
+
+  .descripcionPelicula {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+  }
+
+  .campos {
+    word-wrap: break-word;
+  }
+
+  .campos p,
+  .SeccionHoras .tituloHorarios,
+  .SeccionHoras .horas a {
+    font-size: 20px !important;
+  }
+
+  .horarios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .SeccionHoras {
+    width: 90%;
+  }
+
+
+  #popup-content {
+    height: 60vh;
+  }
+
+
+  #popup-content button {
+    top: 0% !important;
+    right: 0% !important;
+  }
+
+  #popup-content button img {
+    width: 75px;
+    height: 75px;
+  }
+
+  /* body.sala1,
+  body.sala2,
+  body.sala3 {
+    zoom: 47.5%;
+  } */
 }
 
 @media screen and (min-width: 1251px) and (max-width: 1562px) {
@@ -1750,4 +2092,61 @@ form textarea:not(:placeholder-shown)~label {
     height: 420px;
   }
 
+  .trailer {
+    width: 900px !important;
+    height: 500px !important;
+  }
+
+  h2.super,
+  h2.dungeon,
+  h2.dino,
+  h2.papa,
+  h2.wick,
+  h2.coca {
+    width: 90%;
+    font-size: 28px;
+  }
+
+  .campos {
+    width: 100%;
+    word-wrap: break-word;
+  }
+
+  .campos p,
+  .SeccionHoras .tituloHorarios,
+  .SeccionHoras .horas a {
+    font-size: 20px !important;
+  }
+
+  .horarios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .SeccionHoras {
+    width: 90%;
+  }
+
+  #popup-content {
+    height: 60vh;
+  }
+
+  #popup-content button {
+    top: 0% !important;
+    right: 0% !important;
+  }
+
+  #popup-content button img {
+    width: 75px;
+    height: 75px;
+  }
+
+
+ /*  body.sala1,
+  body.sala2,
+  body.sala3 {
+    zoom: 55%;
+  } */
 }
