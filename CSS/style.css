@@ -416,9 +416,9 @@ h2.wick {
   font-family: "Staatliches";
 }
 
-.trailer iframe {
+/* .trailer iframe {
   pointer-events: none;
-}
+} */
 
 div.trailer {
   padding: 5px 5px 5px 5px;
@@ -708,9 +708,9 @@ footer p {
 html.salas {
   display: grid;
   place-content: center;
- /*  position: absolute;
+  /*  position: absolute;
   right: 25%; */
-  zoom: 65%;
+  zoom: 80%;
   height: 100%;
   width: 100%;
   margin: 0 !important;
@@ -1058,8 +1058,8 @@ body.sala3{
   left: 50%;
   transform: translate(-50%, -50%);
   /*   padding: 5%; */
-  height: 75%;
-  width: 50%;
+  height: 90vh;
+  width: 90vw;
   overflow: hidden;
 }
 
@@ -1284,8 +1284,6 @@ form textarea:not(:placeholder-shown)~label {
   display: flex;
   flex-direction: column;
   margin: 1%;
-  width: 50%;
-  height: 100%;
   color: white;
   font-size: 20px;
 }
@@ -1452,6 +1450,15 @@ form textarea:not(:placeholder-shown)~label {
     font-size: 24px;
   }
 
+  .mario:hover::before, .mario:hover img.png,
+  .dragones:hover::before, .dragones:hover img.png,
+  .exorcista:hover::before, .exorcista:hover img.png,
+  .jhon:hover::before, .jhon:hover img.png,
+  .sesenta:hover::before, .sesenta:hover img.png,
+  .oso:hover::before, .oso:hover img.png {
+    opacity: 0;
+  }
+
   .descripcionPelicula {
     flex-direction: column;
     align-items: center;
@@ -1481,12 +1488,12 @@ form textarea:not(:placeholder-shown)~label {
   }
 
   #popup-content {
-    height: 50%;
+    height: 40%;
     width: 90%;
   }
 
-  html.salas{
-    zoom:35%;
+  html.salas {
+    zoom: 27.5%;
   }
 
   #popup-content button img {
@@ -1674,8 +1681,8 @@ form textarea:not(:placeholder-shown)~label {
     width: 90%;
   }
 
-  html.salas{
-    zoom: 50%;
+  html.salas {
+    zoom: 45%;
   }
 
   #popup-content button img {
@@ -1683,7 +1690,12 @@ form textarea:not(:placeholder-shown)~label {
     height: 65px;
   }
 
- /*  body.sala1,
+  #popup-content button {
+    top: -2% !important;
+    right: -2% !important;
+  }
+
+  /*  body.sala1,
   body.sala2,
   body.sala3 {
     zoom: 37.5%;
@@ -1857,13 +1869,14 @@ form textarea:not(:placeholder-shown)~label {
   .SeccionHoras {
     width: 90%;
   }
+
   #popup-content {
-    height: 50%;
+    height: 60%;
     width: 90%;
   }
 
-  html.salas{
-    zoom: 45%;
+  html.salas {
+    zoom: 55%;
   }
 
   #popup-content button img {
@@ -2039,6 +2052,7 @@ form textarea:not(:placeholder-shown)~label {
 
   #popup-content {
     height: 60vh;
+    width: 90vw;
   }
 
 
@@ -2050,6 +2064,10 @@ form textarea:not(:placeholder-shown)~label {
   #popup-content button img {
     width: 75px;
     height: 75px;
+  }
+
+  html.salas {
+    zoom: 55%;
   }
 
   /* body.sala1,
@@ -2134,6 +2152,7 @@ form textarea:not(:placeholder-shown)~label {
 
   #popup-content {
     height: 60vh;
+    width: 75vw;
   }
 
   #popup-content button {
@@ -2146,8 +2165,11 @@ form textarea:not(:placeholder-shown)~label {
     height: 75px;
   }
 
+  html.salas {
+    zoom: 65%;
+  }
 
- /*  body.sala1,
+  /*  body.sala1,
   body.sala2,
   body.sala3 {
     zoom: 55%;
