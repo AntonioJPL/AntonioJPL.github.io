@@ -1148,22 +1148,55 @@ body.sala3 {
   border-radius: 15px;
 }
 
-#miFormulario:invalid .enviar:hover, #miFormulario:invalid .enviar:active {
+#miFormulario:invalid .enviar:hover,
+#miFormulario:invalid .enviar:active {
   animation: shakefix 1s linear infinite;
 }
 
 @keyframes shakefix {
-  0% { transform: translate(1px, 1px); }
-  10% { transform: translate(-1px, -2px); }
-  20% { transform: translate(-3px, 0px); }
-  30% { transform: translate(3px, 2px); }
-  40% { transform: translate(1px, -1px); }
-  50% { transform: translate(-1px, 2px); }
-  60% { transform: translate(-3px, 1px); }
-  70% { transform: translate(3px, 1px); }
-  80% { transform: translate(-1px, -1px); }
-  90% { transform: translate(1px, 2px); }
-  100% { transform: translate(1px, -2px); }
+  0% {
+    transform: translate(1px, 1px);
+  }
+
+  10% {
+    transform: translate(-1px, -2px);
+  }
+
+  20% {
+    transform: translate(-3px, 0px);
+  }
+
+  30% {
+    transform: translate(3px, 2px);
+  }
+
+  40% {
+    transform: translate(1px, -1px);
+  }
+
+  50% {
+    transform: translate(-1px, 2px);
+  }
+
+  60% {
+    transform: translate(-3px, 1px);
+  }
+
+  70% {
+    transform: translate(3px, 1px);
+  }
+
+  80% {
+    transform: translate(-1px, -1px);
+  }
+
+  90% {
+    transform: translate(1px, 2px);
+  }
+
+  100% {
+    transform: translate(1px, -2px);
+  }
 }
 
 form input,
@@ -1195,6 +1228,13 @@ form input:not(:placeholder-shown) {
   border-bottom: 2px solid rgba(0, 36, 89, 255);
 }
 
+form input:focus:invalid,
+form input:not(:placeholder-shown):invalid {
+  transition: transform .5s;
+  transform: translateY(100%);
+  border-bottom: 2px solid rgba(161, 59, 59, 255);
+}
+
 form textarea:focus,
 form textarea:not(:placeholder-shown) {
   transition: transform .5s;
@@ -1208,12 +1248,24 @@ form textarea:not(:placeholder-shown) {
   border-bottom: 2px solid rgba(0, 36, 89, 255);
 }
 
+form textarea:focus:invalid,
+form textarea:not(:placeholder-shown):invalid {
+  border-bottom: 2px solid rgba(161, 59, 59, 255);
+}
+
 form input:focus~label,
 form input:not(:placeholder-shown)~label,
 form textarea:focus~label,
 form textarea:not(:placeholder-shown)~label {
   color: rgba(0, 36, 89, 255);
   font-weight: bold;
+}
+
+form input:focus:invalid~label,
+form input:not(:placeholder-shown):invalid~label,
+form textarea:focus:invalid~label,
+form textarea:not(:placeholder-shown):invalid~label {
+  color: rgba(161, 59, 59, 255);
 }
 
 .campoFormulario:not(.campoFormulario:last-of-type) {
@@ -1420,12 +1472,18 @@ form textarea:not(:placeholder-shown)~label {
     font-size: 24px;
   }
 
-  .mario:hover::before, .mario:hover img.png,
-  .dragones:hover::before, .dragones:hover img.png,
-  .exorcista:hover::before, .exorcista:hover img.png,
-  .jhon:hover::before, .jhon:hover img.png,
-  .sesenta:hover::before, .sesenta:hover img.png,
-  .oso:hover::before, .oso:hover img.png {
+  .mario:hover::before,
+  .mario:hover img.png,
+  .dragones:hover::before,
+  .dragones:hover img.png,
+  .exorcista:hover::before,
+  .exorcista:hover img.png,
+  .jhon:hover::before,
+  .jhon:hover img.png,
+  .sesenta:hover::before,
+  .sesenta:hover img.png,
+  .oso:hover::before,
+  .oso:hover img.png {
     opacity: 0;
   }
 
@@ -1476,7 +1534,7 @@ form textarea:not(:placeholder-shown)~label {
 @media screen and (min-width: 531px) and (max-width: 790px) {
   #web {
     margin: 0;
-    
+
   }
 
   #head {
