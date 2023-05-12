@@ -1150,7 +1150,7 @@ body.sala3 {
 
 #miFormulario:invalid .enviar:hover,
 #miFormulario:invalid .enviar:active {
-  animation: shakefix 1s linear infinite;
+  animation: shakefix 1s linear 1;
 }
 
 @keyframes shakefix {
