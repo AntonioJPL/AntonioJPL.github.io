@@ -43,8 +43,9 @@
   src: url(../RESOURCES/FONTS/Staatliches-Regular.ttf);
 }
 
-/* Hacer los hovers de las imagenes de la cartelera al tamanio que son, 
-arreglar lo de las salas */
+/* Falta revisar elementos que tengan delcaraciones que no funcionen para eliminarlas
+estructurar y ordenar el css y aniadir una animacion al boton del formulario para 
+cuando le den y haya errores.*/
 
 html {
   display: flex;
@@ -106,7 +107,7 @@ body:not(body.sala1, body.sala2, body.sala3)::before {
 }
 
 #head a {
-  height: 10%;
+  height: 15vh;
 }
 
 #head h1 {
@@ -416,10 +417,6 @@ h2.wick {
   font-family: "Staatliches";
 }
 
-/* .trailer iframe {
-  pointer-events: none;
-} */
-
 div.trailer {
   padding: 5px 5px 5px 5px;
   background-color: white;
@@ -429,7 +426,6 @@ div.trailer {
 
 div.trailer video {
   object-fit: contain;
-  /* max-height: 500px; */
 }
 
 div.horarios {
@@ -708,8 +704,6 @@ footer p {
 html.salas {
   display: grid;
   place-content: center;
-  /*  position: absolute;
-  right: 25%; */
   zoom: 80%;
   height: 100%;
   width: 100%;
@@ -720,27 +714,14 @@ html.salas {
 body.sala1,
 body.sala2,
 body.sala3 {
-  /* zoom: 65%; */
   overflow: hidden;
   width: 100%;
   height: 100%;
   background-color: black;
   margin: 0;
   padding: 0;
-  /* display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center; */
-  /* display: grid;
-  place-items: center; */
   z-index: 2;
 }
-
-/* body.sala1,
-body.sala2,
-body.sala3{
-  zoom: 65%;
-} */
 
 .sala1 .contenedor,
 .sala2 .contenedor,
@@ -756,7 +737,6 @@ body.sala3{
   height: 900px;
   background-image: url(../RESOURCES/IMG/Sala1.jpg);
   background-repeat: no-repeat;
-  /* background-size: 50%; */
   background-size: cover;
 }
 
@@ -850,7 +830,6 @@ body.sala3{
 .sala3 .display td img {
   height: 75px;
   width: 61px;
-  /*     display: none; */
   z-index: 2;
 }
 
@@ -1057,7 +1036,6 @@ body.sala3{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /*   padding: 5%; */
   height: 90vh;
   width: 90vw;
   overflow: hidden;
@@ -1112,30 +1090,6 @@ body.sala3{
   margin: 0;
 }
 
-/* @keyframes wipe-in-up {
-    from {
-      clip-path: inset(100% 0 0 0);
-    }
-    to {
-      clip-path: inset(0 0 0 0);
-    }
-  }
-  
-  [transition-style="in:wipe:up"] {
-    animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-up both;
-  }
-  @keyframes wipe-out-down {
-    from {
-      clip-path: inset(0 0 0 0);
-    }
-    to {
-      clip-path: inset(100% 0 0 0);
-    }
-  }
-  
-  [transition-style="out:wipe:down"] {
-    animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-out-down both;
-  } */
 .espacioContacto {
   display: flex;
   width: 120%;
@@ -1251,21 +1205,6 @@ form textarea:not(:placeholder-shown)~label {
   border-radius: 10px;
 }
 
-/* .footerContacto {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  font-size: 24px;
-  color: rgba(0, 38, 93, 100%);
-  justify-content: center;
-  background-color: white;
-  background-image: none;
-}
-
-.footerContacto a {
-  color: rgb(0, 36, 89);
-} */
-
 .infoContacto {
   font-family: 'Bungee';
   letter-spacing: 1px;
@@ -1308,7 +1247,6 @@ form textarea:not(:placeholder-shown)~label {
   #head a {
     display: flex;
     align-items: center;
-    height: 15vh;
   }
 
   #head h1 {
@@ -1436,8 +1374,8 @@ form textarea:not(:placeholder-shown)~label {
   }
 
   .trailer {
-    width: 300px !important;
-    height: 210px !important;
+    width: 80vw !important;
+    height: 300px !important;
   }
 
   h2.super,
@@ -1500,12 +1438,6 @@ form textarea:not(:placeholder-shown)~label {
     width: 50px;
     height: 50px;
   }
-
-  /* body.sala1,
-  body.sala2,
-  body.sala3 {
-    zoom: 25%;
-  } */
 
 }
 
@@ -1634,7 +1566,7 @@ form textarea:not(:placeholder-shown)~label {
   }
 
   .trailer {
-    width: 550px !important;
+    width: 80vw !important;
     height: 350px !important;
   }
 
@@ -1694,12 +1626,6 @@ form textarea:not(:placeholder-shown)~label {
     top: -2% !important;
     right: -2% !important;
   }
-
-  /*  body.sala1,
-  body.sala2,
-  body.sala3 {
-    zoom: 37.5%;
-  } */
 
 }
 
@@ -1828,7 +1754,7 @@ form textarea:not(:placeholder-shown)~label {
   }
 
   .trailer {
-    width: 550px !important;
+    width: 80vw !important;
     height: 350px !important;
   }
 
@@ -1884,11 +1810,6 @@ form textarea:not(:placeholder-shown)~label {
     height: 75px;
   }
 
-  /* body.sala1,
-  body.sala2,
-  body.sala3 {
-    zoom: 42.5%;
-  } */
 }
 
 @media screen and (min-width: 926px) and (max-width: 1250px) {
@@ -2007,7 +1928,7 @@ form textarea:not(:placeholder-shown)~label {
   }
 
   .trailer {
-    width: 650px !important;
+    width: 70vw !important;
     height: 400px !important;
   }
 
@@ -2070,11 +1991,6 @@ form textarea:not(:placeholder-shown)~label {
     zoom: 55%;
   }
 
-  /* body.sala1,
-  body.sala2,
-  body.sala3 {
-    zoom: 47.5%;
-  } */
 }
 
 @media screen and (min-width: 1251px) and (max-width: 1562px) {
@@ -2169,9 +2085,4 @@ form textarea:not(:placeholder-shown)~label {
     zoom: 65%;
   }
 
-  /*  body.sala1,
-  body.sala2,
-  body.sala3 {
-    zoom: 55%;
-  } */
 }
