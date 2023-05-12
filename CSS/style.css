@@ -1467,8 +1467,8 @@ form textarea:not(:placeholder-shown)~label {
   }
 
   #popup-content button img {
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
   }
 
 }
