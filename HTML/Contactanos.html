@@ -26,16 +26,18 @@
 
         <h2>Contáctanos</h2>
         <div class="espacioContacto">
-            <form class="formularioContacto">
+            <form class="formularioContacto" id="miFormulario">
                 <div class="campoFormulario">
-                    <input id="nombre" type="text" placeholder=" " required title="Introduzca su nombre."
-                        oninvalid="this.setCustomValidity('Debes rellenar este campo para poder ponerte en contacto con nosotros.')">
+                    <input id="nombre" type="text" placeholder=" " title="Introduzca su nombre."
+                    oninvalid="this.setCustomValidity('Debes rellenar este campo para poder ponerte en contacto con nosotros.')" 
+                    oninput="setCustomValidity('')" required>
                     <label for="nombre">Nombre:</label>
                 </div>
                 <div class="campoFormulario">
                     <input id="email" type="email" placeholder=" " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                        required title="Introduzca la dirección de correo a la que queire que le respondamos."
-                        oninvalid="this.setCustomValidity('Debes rellenar este campo para poder ponerte en contacto con nosotros.')">
+                        title="Introduzca la dirección de correo a la que queire que le respondamos."
+                        oninvalid="this.setCustomValidity('Debes rellenar este campo para poder ponerte en contacto con nosotros.')" 
+                        oninput="setCustomValidity('')" required>
                     <label for="email">Correo:</label>
                 </div>
                 <div class="campoFormulario">
@@ -44,8 +46,9 @@
                     <label for="telefono">Teléfono:</label>
                 </div>
                 <div class="campoFormulario">
-                    <textarea id="mensaje" type="text" placeholder=" " required title="Introduzca su mensaje."
-                        oninvalid="this.setCustomValidity('Debes rellenar este campo para poder ponerte en contacto con nosotros.')"></textarea>
+                    <textarea id="mensaje" type="text" placeholder=" " title="Introduzca su mensaje."
+                        oninvalid="this.setCustomValidity('Debes rellenar este campo para poder ponerte en contacto con nosotros.')"
+                        oninput="setCustomValidity('')"  required></textarea>
                     <label for="mensaje">Mensaje:</label>
                 </div>
                 <button class="enviar">Enviar</button>
@@ -81,6 +84,7 @@
     <script async
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtbzsqMXJObaR35g_Bs8YdVhPhPxQTSUk&callback=initMap"></script>
     <script src="../JS/maps.js"></script>
+    
 </body>
 
 </html>
